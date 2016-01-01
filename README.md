@@ -7,6 +7,8 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/crawler.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/crawler)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/crawler.svg?style=flat-square)](https://packagist.org/packages/spatie/crawler)
 
+THIS IS A FORK OF THE SPATIE CRAWLER. IT ADDS A CALLBACK FUNCTION TO RECIEVE ALL THE LINKS ON THE CRAWLED PAGE.
+
 This package provides a class to crawl links on a website.
 
 Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
