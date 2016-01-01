@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\Crawler;
+namespace SimZal\Crawler;
 
 class CrawlAllUrls implements CrawlProfile
 {
     /**
      * Determine if the given url should be crawled.
      *
-     * @param \Spatie\Crawler\Url $url
+     * @param \SimZal\Crawler\Url $url
      *
      * @return bool
      */

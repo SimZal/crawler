@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Crawler;
+namespace SimZal\Crawler;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
-use Spatie\Crawler\Exceptions\InvalidBaseUrl;
+use SimZal\Crawler\Exceptions\InvalidBaseUrl;
 use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 class Crawler
@@ -16,7 +16,7 @@ class Crawler
     protected $client;
 
     /**
-     * @var \Spatie\Crawler\Url;
+     * @var \SimZal\Crawler\Url;
      */
     protected $baseUrl;
 
@@ -26,12 +26,12 @@ class Crawler
     protected $crawledUrls;
 
     /**
-     * @var \Spatie\Crawler\CrawlObserver
+     * @var \SimZal\Crawler\CrawlObserver
      */
     protected $crawlObserver;
 
     /**
-     * @var \Spatie\Crawler\CrawlProfile
+     * @var \SimZal\Crawler\CrawlProfile
      */
     protected $crawlProfile;
 
@@ -63,7 +63,7 @@ class Crawler
     /**
      * Set the crawl observer.
      *
-     * @param \Spatie\Crawler\CrawlObserver $crawlObserver
+     * @param \SimZal\Crawler\CrawlObserver $crawlObserver
      *
      * @return $this
      */
@@ -77,7 +77,7 @@ class Crawler
     /**
      * Set the crawl profile.
      *
-     * @param \Spatie\Crawler\CrawlProfile $crawlProfile
+     * @param \SimZal\Crawler\CrawlProfile $crawlProfile
      *
      * @return $this
      */
@@ -91,9 +91,9 @@ class Crawler
     /**
      * Start the crawling process.
      *
-     * @param \Spatie\Crawler\Url|string $baseUrl
+     * @param \SimZal\Crawler\Url|string $baseUrl
      *
-     * @throws \Spatie\Crawler\Exceptions\InvalidBaseUrl
+     * @throws \SimZal\Crawler\Exceptions\InvalidBaseUrl
      */
     public function startCrawling($baseUrl)
     {
@@ -115,7 +115,7 @@ class Crawler
     /**
      * Crawl the given url.
      *
-     * @param \Spatie\Crawler\Url $url
+     * @param \SimZal\Crawler\Url $url
      */
     protected function crawlUrl(Url $url)
     {
@@ -177,7 +177,7 @@ class Crawler
      *
      * @param string $html
      *
-     * @return \Spatie\Crawler\Url[]
+     * @return \SimZal\Crawler\Url[]
      */
     protected function getAllLinks($html)
     {
@@ -193,7 +193,7 @@ class Crawler
     /**
      * Determine if the crawled has already crawled the given url.
      *
-     * @param \Spatie\Crawler\Url $url
+     * @param \SimZal\Crawler\Url $url
      *
      * @return bool
      */
@@ -211,7 +211,7 @@ class Crawler
     /**
      * Normalize the given url.
      *
-     * @param \Spatie\Crawler\Url $url
+     * @param \SimZal\Crawler\Url $url
      *
      * @return $this
      */

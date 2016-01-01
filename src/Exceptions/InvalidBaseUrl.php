@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Crawler\Exceptions;
+namespace SimZal\Crawler\Exceptions;
 
 use Exception;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Crawler;
+namespace SimZal\Crawler;
 
-use Spatie\Crawler\Exceptions\InvalidPortNumber;
+use SimZal\Crawler\Exceptions\InvalidPortNumber;
 
 class Url
 {
@@ -115,7 +115,7 @@ class Url
      *
      * @return $this
      *
-     * @throws \Spatie\Crawler\Exceptions\InvalidPortNumber
+     * @throws \SimZal\Crawler\Exceptions\InvalidPortNumber
      */
     public function setPort($port)
     {
