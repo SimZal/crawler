@@ -20,6 +20,14 @@ interface CrawlObserver
     public function hasBeenCrawled(Url $url, $response);
 
     /**
+     * Called when the crawler has found links on the page
+     *
+     * @param \SimZal\Crawler\Url                       $url
+     * @param \Illuminate\Support\Collection            $links
+     */
+    public function foundLinks(Url $url, $links);
+
+    /**
      * Called when the crawl has ended.
      */
     public function finishedCrawling();

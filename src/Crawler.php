@@ -139,14 +139,41 @@ class Crawler
 
         $this->crawledUrls->push($url);
 
+        $html = $response->getBody()->getContents();
+
+        $this->crawlObserver->foundLinks($url, $this->getLinks($html));
+
         if (!$response) {
             return;
         }
 
         if ($url->host === $this->baseUrl->host) {
-            $this->crawlAllLinks($response->getBody()->getContents());
+            $this->crawlAllLinks($html);
         }
     }
+
+    /**
+     * Crawl all links in the given html.
+     *
+     * @param string                              $html
+     *
+     * @return \Illuminate\Support\Collection     $links
+     */
+    protected function getLinks($html)
+    {
+        $allLinks = $this->getAllLinks($html);
+
+        $links = collect($allLinks)
+            ->filter(function (Url $url) {
+                return !$url->isEmailUrl();
+            })
+            ->map(function (Url $url) {
+                return $this->normalizeUrl($url);
+            })->unique();
+        
+        return $links;
+    }
+
 
     /**
      * Crawl all links in the given html.
